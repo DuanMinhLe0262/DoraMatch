@@ -717,7 +717,21 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d7ba73903e45a4548a984fb37afc8474, type: 3}
   - {fileID: 21300000, guid: 7e8b67eb198973d4dbc763dc5e797f6e, type: 3}
   - {fileID: 21300000, guid: 8991fc962a8e66e4799150bff14f409d, type: 3}
+  - {fileID: 21300000, guid: 09196759f4bce844bb5d792d28500061, type: 3}
+  - {fileID: 21300000, guid: dfbf3cd1ec9f6684492878a50f4a03a1, type: 3}
+  - {fileID: 21300000, guid: 58ce6ee34b495a04e806902dd8b59197, type: 3}
+  - {fileID: 21300000, guid: 2bc2cb2f1c3c29b4b846e0ff52759583, type: 3}
+  - {fileID: 21300000, guid: e575db5a6a8a365409ba44dc30009bcb, type: 3}
+  - {fileID: 21300000, guid: 67ea14e63b486d54b9f995bfb04e381d, type: 3}
   lineDrawer: {fileID: 217145815}
+  boardGrid: {fileID: 1125781688}
+  levels:
+  - {fileID: 11400000, guid: 0611a17b866700d428dd27a8423eaf01, type: 2}
+  - {fileID: 11400000, guid: dc7eabac98ce34a4585e4f58db365855, type: 2}
+  - {fileID: 11400000, guid: c0a134031c923de4d8fdb7af52d9a2c9, type: 2}
+  - {fileID: 11400000, guid: 1d559d4b6330b7d42855badb532c1a19, type: 2}
+  - {fileID: 11400000, guid: 93c123a8c52ba514980ae0b854b7f60f, type: 2}
+  maxShuffleAttempts: 20
 --- !u!4 &758929369
 Transform:
   m_ObjectHideFlags: 0

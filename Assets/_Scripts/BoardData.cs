@@ -15,13 +15,11 @@ public class BoardData
     int playableCellCount = rows * cols;
     if (playableCellCount % 2 != 0)
     {
-      Debug.LogError("So o choi phai la so chan");
       return;
     }
 
     if (iconTypeCount <= 0)
     {
-      Debug.LogError("iconTypeCount phai lon hon 0");
       return;
     }
 
@@ -87,4 +85,165 @@ public class BoardData
       (values[i], values[rand]) = (values[rand], values[i]);
     }
   }
+
+  public void ApplyRule(BoardRule rule)
+  {
+    switch (rule)
+    {
+      case BoardRule.CollapseDown:
+        CollapseDown();
+        break;
+
+      case BoardRule.CollapseUp:
+        CollapseUp();
+        break;
+
+      case BoardRule.ShiftLeft:
+        ShiftLeft();
+        break;
+      case BoardRule.ShiftRight:
+        ShiftRight();
+        break;
+    }
+  }
+
+  public void ShuffleRemainingTiles()
+  {
+    if (Cells == null)
+      return;
+
+    List<int> remainingValues = new();
+
+    for (int r = 1; r <= PlayableRows; r++)
+    {
+      for (int c = 1; c <= PlayableCols; c++)
+      {
+        if (Cells[r, c] != 0)
+          remainingValues.Add(Cells[r, c]);
+      }
+    }
+
+    if (remainingValues.Count <= 1)
+      return;
+
+    Shuffle(remainingValues);
+
+    int index = 0;
+    for (int r = 1; r <= PlayableRows; r++)
+    {
+      for (int c = 1; c <= PlayableCols; c++)
+      {
+        if (Cells[r, c] != 0)
+        {
+          Cells[r, c] = remainingValues[index];
+          index++;
+        }
+      }
+    }
+  }
+
+  private void CollapseDown()
+  {
+    for (int c = 1; c <= PlayableCols; c++)
+    {
+      int writeRow = PlayableRows;
+
+      for (int r = PlayableRows; r >= 1; r--)
+      {
+        if (Cells[r, c] != 0)
+        {
+          Cells[writeRow, c] = Cells[r, c];
+
+          if (writeRow != r)
+            Cells[r, c] = 0;
+
+          writeRow--;
+        }
+      }
+
+      for (int r = writeRow; r >= 1; r--)
+      {
+        Cells[r, c] = 0;
+      }
+    }
+  }
+
+  private void CollapseUp()
+  {
+    for (int c = 1; c <= PlayableCols; c++)
+    {
+      int writeRow = 1;
+
+      for (int r = 1; r <= PlayableRows; r++)
+      {
+        if (Cells[r, c] != 0)
+        {
+          Cells[writeRow, c] = Cells[r, c];
+
+          if (writeRow != r)
+            Cells[r, c] = 0;
+
+          writeRow++;
+        }
+      }
+
+      for (int r = writeRow; r <= PlayableRows; r++)
+      {
+        Cells[r, c] = 0;
+      }
+    }
+  }
+
+  private void ShiftLeft()
+  {
+    for (int r = 1; r <= PlayableRows; r++)
+    {
+      int writeCol = 1;
+
+      for (int c = 1; c <= PlayableCols; c++)
+      {
+        if (Cells[r, c] != 0)
+        {
+          Cells[r, writeCol] = Cells[r, c];
+
+          if (writeCol != c)
+            Cells[r, c] = 0;
+
+          writeCol++;
+        }
+      }
+
+      for (int c = writeCol; c <= PlayableCols; c++)
+      {
+        Cells[r, c] = 0;
+      }
+    }
+  }
+
+  private void ShiftRight()
+  {
+    for (int r = 1; r <= PlayableRows; r++)
+    {
+      int writeCol = PlayableCols;
+
+      for (int c = PlayableCols; c >= 1; c--)
+      {
+        if (Cells[r, c] != 0)
+        {
+          Cells[r, writeCol] = Cells[r, c];
+
+          if (writeCol != c)
+            Cells[r, c] = 0;
+
+          writeCol--;
+        }
+      }
+
+      for (int c = writeCol; c >= 1; c--)
+      {
+        Cells[r, c] = 0;
+      }
+    }
+  }
+
 }

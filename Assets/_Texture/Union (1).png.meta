@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e0088e04bb544294eaa88320c47ecf96
+guid: 77a280fc1107f2c46bf22dca7879e8c3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2535969055436306912
-    second: image_16-removebg-preview_0
+      213: 8804299390334372615
+    second: Union (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -48,11 +48,11 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 80, y: 0, z: 80, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -101,7 +101,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: image_16-removebg-preview_0
+      name: Union (1)_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 2
-        width: 48
-        height: 61
+        x: 0
+        y: 0
+        width: 304
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0260659849d6eccd0800000000000000
-      internalID: -2535969055436306912
+      spriteID: 70b8119f5a72f2a70800000000000000
+      internalID: 8804299390334372615
       vertices: []
       indices: 
       edges: []
@@ -139,7 +139,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      image_16-removebg-preview_0: -2535969055436306912
+      Union (1)_0: 8804299390334372615
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

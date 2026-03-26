@@ -58,4 +58,6 @@ public class LineDrawer : MonoBehaviour
     yield return new WaitForSeconds(showTime);
     lineRenderer.positionCount = 0;
   }
+
+  public float ShowTime => showTime;
 }
