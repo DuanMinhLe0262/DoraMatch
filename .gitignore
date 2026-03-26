@@ -1,0 +1,54 @@
+# Unity generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+[Uu]ser[Ss]ettings/
+[Rr]ecordings/
+
+# Addressables / generated content
+Assets/AddressableAssetsData/*/*.bin*
+
+# IDE and editor settings
+.vs/
+.vscode/
+.idea/
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Auto-generated project files
+*.csproj
+*.unityproj
+*.sln
+*.slnx
+*.tmp
+*.stackdump
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Unity meta backups and crash reports
+sysinfo.txt
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# Package manager / test output
+TestResults/
+
+# Optional large cache folders
+Assets/AssetStoreTools*
